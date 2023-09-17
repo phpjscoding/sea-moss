@@ -1313,7 +1313,8 @@ padding-bottom: 1em;
   list-style: none;
 }
 }
-.main-footer ul li details summary{
+.main-footer ul li details summary,.single-product summary{
+
   margin-bottom: 1em;
 }
 
@@ -1331,6 +1332,11 @@ details>summary {
  summary::-webkit-details-marker {
    display: none
  }
+
+
+
+
+
 
 
  @media screen and (max-width:768px){
@@ -1368,4 +1374,99 @@ width: 100%;
  }
  .main-footer a:hover{
   text-decoration: underline;
+ 
  }
+
+ 
+
+ .single-product {
+  padding:2em 1em;
+  font-family: PoppinsNormal;
+
+
+ }
+ .single-product .container {
+  margin: auto;
+ }
+
+ .single-product .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
+
+ .single-product .product-title{
+  color: var(--purple);
+font-size: 36px;
+font-style: normal;
+font-weight: 600;
+line-height: 140.5%; /* 50.58px */
+ }
+ .single-product .col{
+  flex:1;
+  
+ }
+ .single-product .row{
+  gap:1em
+ }
+ .single-product .product-price{
+  color: var(--purple);
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: 113.5%; /* 24.97px */
+padding: 1em 0;
+ }
+
+ .single-product .product-desc{
+  list-style: inside;
+  margin-bottom: 2em;
+ }
+
+ .single-product .product-form{
+  text-align: left;
+ }
+ .single-product form input[name="quantity"]{
+  border: 1px solid #ccc;
+ }
+
+ .single-product details{
+  width: 100%;
+   padding:0 .5em;
+   margin-bottom: 2rem;
+  
+}
+.single-product summary{
+   display: flex;
+    
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 .5em;
+    color: var(--purple);
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 155.5%; /* 27.99px */
+}
+
+ .single-product summary::after {
+   content: '〱';
+   position: absolute;
+   right:0;
+   transform: rotate(-90deg);
+ }
+ .single-product details[open] summary:after {
+   content: "〱";
+   position: absolute;
+   right:0;
+       transform: rotate(90deg);
+    transition: rotate .2s ease-in-out
+ }
+
+ .single-product details ul{
+  list-style: disc;
+ }
+ .single-product details {
+    border-top: 1px solid var(--bg-gray);
+    padding-top: 10px;
+}
